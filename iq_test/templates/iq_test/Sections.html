@@ -1,0 +1,33 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+Set: Set {{ set }}<br/>
+Answers: {{ answer }}
+{% endblock %}
+
+{% block content %}
+
+{% if link %}
+<div class="demo">
+    <div class="wrap">
+        <div
+            class="question-pic"
+            style="background:url(/static/iq_test/imgs/{{link}}) no-repeat center;"></div>
+    </div>
+</div>
+{% endif %}
+
+{% formfield player.submitted_answer label=player.question %}
+
+<div class="next-btn" style="text-align:right;">{% next_button %}</div>
+
+{% endblock %}
+
+{% block styles %}
+<style>
+.question-pic {
+    height: 250px;
+}
+</style>
+{% endblock %}

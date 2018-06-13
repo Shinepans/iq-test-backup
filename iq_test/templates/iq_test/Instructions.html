@@ -1,0 +1,21 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Description
+
+{% endblock %}
+
+{% block content %}
+    <ol type="a" class="list-group">
+        <li class="list-group-item">
+            Subjects will be asked to answer 4 sets of multiple-choice questions. Each set has to be completed within a
+            certain amount of time (180 seconds per section). Participants can skip questions and come back to them later
+            within the same set. Once a set is completed, it is not possible to change or come back to the answers you
+            have submitted. Participants will earn 1 RMB  per each correct answer submitted.
+        </li>
+    </ol>
+    <div class="mt-3">
+        {% next_button %}
+    </div>
+{% endblock %}
